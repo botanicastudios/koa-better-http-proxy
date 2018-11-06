@@ -6,7 +6,7 @@ function resolveProxyHost(container) {
 
   container.proxy.reqBuilder.host = parsedHost.host;
   container.proxy.reqBuilder.port = container.options.port || parsedHost.port;
-  container.proxy.requestModule = parsedHost.module;
+  container.proxy.requestModule = container.options.requestModule || parsedHost.module;
   return Promise.resolve(container);
 }
 
